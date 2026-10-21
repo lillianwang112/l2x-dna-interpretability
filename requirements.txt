@@ -1,0 +1,9 @@
+# Direct dependencies resolved on Python 3.10.14, macOS arm64 (CPU).
+# The complete resolved environment is in requirements-lock-macos-arm64-py310.txt.
+numpy==2.2.6
+torch==2.14.1
+tensorflow==2.21.0
+keras==3.12.4
+scikit-learn==1.7.2
+matplotlib==3.10.9
+tqdm==4.70.1

@@ -1,0 +1,25 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Generated predictions, models, diagnostics, and build artifacts
+outputs/
+outputs_k_curve/
+*.npy
+*.hdf5
+*.h5
+*.keras
+*.pt
+*.pth
+*.log
+confusion_matrix.png
+stats.json
+
+# Local/editor files
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,370 @@
+{
+  "evaluation_population": "validation ancestor families",
+  "test_metrics_evaluated": false,
+  "dataset_fingerprint": "73306065a90799a97c02222955a9a92f4bedaf5bedab479f005563a86d2684cb",
+  "split_fingerprint": "56f92276066c94ac6bca7b258136ad4e6fa420ee686db63067e6da604933ed16",
+  "teacher_fingerprint": "436fa5f718fcaa18553d32d5642e7df31e2222ce70622c4e6b1c0d74167b47c2",
+  "validation_rows": 2000,
+  "validation_families": 20,
+  "protocol": {
+    "k": 5,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "epochs": 15,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "temperature": 0.5,
+    "initialization": "same saved Q weights; fresh Adam in each arm",
+    "frozen_components": [
+      "teacher",
+      "selector"
+    ],
+    "checkpoint_selection": "final epoch only",
+    "soft_evaluation_draws": 10,
+    "script_sha256": "e40d514e86a4c42794b2ea712673031b1dea085f931ad9a5c2fd6be5842f3cbb"
+  },
+  "original_checkpoint_exact_k": {
+    "teacher_agreement": {
+      "mean": 0.7244999999999999,
+      "sample_sd": 0.042154477816715955
+    },
+    "teacher_negative_agreement": {
+      "mean": 0.7267452741905297,
+      "sample_sd": 0.05803764676939606
+    },
+    "teacher_positive_agreement": {
+      "mean": 0.7062404870624048,
+      "sample_sd": 0.09383904195919847
+    },
+    "balanced_teacher_agreement": {
+      "mean": 0.7164928806264673,
+      "sample_sd": 0.021921268108754458
+    },
+    "true_label_accuracy": {
+      "mean": 0.8543333333333333,
+      "sample_sd": 0.022007574453658772
+    },
+    "teacher_cross_entropy": {
+      "mean": 0.735992845557962,
+      "sample_sd": 0.027410713354867677
+    },
+    "teacher_kl": {
+      "mean": 0.35174790647949905,
+      "sample_sd": 0.027410713354867597
+    },
+    "positive_probability_mae": {
+      "mean": 0.24012388100190826,
+      "sample_sd": 0.02452133174498874
+    }
+  },
+  "final_exact_k_by_training_mode": {
+    "soft": {
+      "teacher_agreement": {
+        "mean": 0.7118333333333333,
+        "sample_sd": 0.022272928261307164
+      },
+      "teacher_negative_agreement": {
+        "mean": 0.7076548755380871,
+        "sample_sd": 0.03309571911772254
+      },
+      "teacher_positive_agreement": {
+        "mean": 0.745814307458143,
+        "sample_sd": 0.076589014462156
+      },
+      "balanced_teacher_agreement": {
+        "mean": 0.7267345914981153,
+        "sample_sd": 0.024595617297310884
+      },
+      "true_label_accuracy": {
+        "mean": 0.8443333333333333,
+        "sample_sd": 0.017480942003603075
+      },
+      "teacher_cross_entropy": {
+        "mean": 0.7425785276410615,
+        "sample_sd": 0.02132229323008339
+      },
+      "teacher_kl": {
+        "mean": 0.3583335885625984,
+        "sample_sd": 0.02132229323008339
+      },
+      "positive_probability_mae": {
+        "mean": 0.2498241248471216,
+        "sample_sd": 0.013135202163466957
+      }
+    },
+    "hard": {
+      "teacher_agreement": {
+        "mean": 0.7361666666666666,
+        "sample_sd": 0.03363158237926569
+      },
+      "teacher_negative_agreement": {
+        "mean": 0.7454613513007673,
+        "sample_sd": 0.04759811560090338
+      },
+      "teacher_positive_agreement": {
+        "mean": 0.6605783866057838,
+        "sample_sd": 0.08691806109752959
+      },
+      "balanced_teacher_agreement": {
+        "mean": 0.7030198689532755,
+        "sample_sd": 0.022728861011697243
+      },
+      "true_label_accuracy": {
+        "mean": 0.851,
+        "sample_sd": 0.027124711980037654
+      },
+      "teacher_cross_entropy": {
+        "mean": 0.6628060783715432,
+        "sample_sd": 0.027968609877732257
+      },
+      "teacher_kl": {
+        "mean": 0.27856113929308013,
+        "sample_sd": 0.027968609877732288
+      },
+      "positive_probability_mae": {
+        "mean": 0.22247073069779436,
+        "sample_sd": 0.01629984032938794
+      }
+    }
+  },
+  "paired_hard_minus_soft": {
+    "per_seed": [
+      {
+        "seed": 0,
+        "teacher_agreement": 0.0035000000000000586,
+        "teacher_negative_agreement": 0.010106681639528325,
+        "teacher_positive_agreement": -0.05022831050228305,
+        "balanced_teacher_agreement": -0.020060814431377416,
+        "true_label_accuracy": 0.014499999999999957,
+        "teacher_cross_entropy": -0.03662685039085389,
+        "teacher_kl": -0.03662685039085378,
+        "positive_probability_mae": -0.007712421449192319
+      },
+      {
+        "seed": 1,
+        "teacher_agreement": 0.04149999999999998,
+        "teacher_negative_agreement": 0.057271195957327437,
+        "teacher_positive_agreement": -0.08675799086757985,
+        "balanced_teacher_agreement": -0.014743397455126317,
+        "true_label_accuracy": -0.009499999999999953,
+        "teacher_cross_entropy": -0.08879986490592207,
+        "teacher_kl": -0.08879986490592195,
+        "positive_probability_mae": -0.033606855659367274
+      },
+      {
+        "seed": 2,
+        "teacher_agreement": 0.028000000000000025,
+        "teacher_negative_agreement": 0.04604154969118468,
+        "teacher_positive_agreement": -0.1187214611872146,
+        "balanced_teacher_agreement": -0.03633995574801496,
+        "true_label_accuracy": 0.014999999999999902,
+        "teacher_cross_entropy": -0.113890632511779,
+        "teacher_kl": -0.11389063251177906,
+        "positive_probability_mae": -0.04074090533942218
+      }
+    ],
+    "summary": {
+      "teacher_agreement": {
+        "mean": 0.024333333333333356,
+        "sample_sd": 0.019263523388345444
+      },
+      "teacher_negative_agreement": {
+        "mean": 0.03780647576268015,
+        "sample_sd": 0.024637069319714565
+      },
+      "teacher_positive_agreement": {
+        "mean": -0.08523592085235916,
+        "sample_sd": 0.03427193378751205
+      },
+      "balanced_teacher_agreement": {
+        "mean": -0.023714722544839566,
+        "sample_sd": 0.011252382676604663
+      },
+      "true_label_accuracy": {
+        "mean": 0.006666666666666636,
+        "sample_sd": 0.014002975874196579
+      },
+      "teacher_cross_entropy": {
+        "mean": -0.07977244926951832,
+        "sample_sd": 0.03941501847915001
+      },
+      "teacher_kl": {
+        "mean": -0.07977244926951826,
+        "sample_sd": 0.03941501847915008
+      },
+      "positive_probability_mae": {
+        "mean": -0.02735339414932726,
+        "sample_sd": 0.01737957199314636
+      }
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "training_mode": "soft",
+      "initial_approximator_hash": "04b0bb366774573abcdbf643d0b8076e5fb51741f2f5f6132f2ee04cf899a71b",
+      "final_approximator_hash": "5b9aac0d5b5291b4b8cafb4bf48d4a5773149cb7667460f4cf8a884cf7728f2f",
+      "frozen_selector_hash": "918e9b78ad5640d90c58b79421fc0b1e05af2e79430c1ce2a0730f74e8de7973",
+      "final_exact_k": {
+        "teacher_agreement": 0.713,
+        "teacher_negative_agreement": 0.7029758562605278,
+        "teacher_positive_agreement": 0.7945205479452054,
+        "balanced_teacher_agreement": 0.7487482021028666,
+        "teacher_vs_approximator_confusion": [
+          [
+            1252,
+            529
+          ],
+          [
+            45,
+            174
+          ]
+        ],
+        "true_label_accuracy": 0.8335,
+        "teacher_cross_entropy": 0.7309160847631123,
+        "teacher_kl": 0.34667114568464924,
+        "positive_probability_mae": 0.24580025780410505
+      }
+    },
+    {
+      "seed": 0,
+      "training_mode": "hard",
+      "initial_approximator_hash": "04b0bb366774573abcdbf643d0b8076e5fb51741f2f5f6132f2ee04cf899a71b",
+      "final_approximator_hash": "515725787e4a2194eee0b8ff1d94ad4fec551a2d5dad8c394ee279d4a1882925",
+      "frozen_selector_hash": "918e9b78ad5640d90c58b79421fc0b1e05af2e79430c1ce2a0730f74e8de7973",
+      "final_exact_k": {
+        "teacher_agreement": 0.7165,
+        "teacher_negative_agreement": 0.7130825379000562,
+        "teacher_positive_agreement": 0.7442922374429224,
+        "balanced_teacher_agreement": 0.7286873876714892,
+        "teacher_vs_approximator_confusion": [
+          [
+            1270,
+            511
+          ],
+          [
+            56,
+            163
+          ]
+        ],
+        "true_label_accuracy": 0.848,
+        "teacher_cross_entropy": 0.6942892343722584,
+        "teacher_kl": 0.31004429529379546,
+        "positive_probability_mae": 0.23808783635491274
+      }
+    },
+    {
+      "seed": 1,
+      "training_mode": "soft",
+      "initial_approximator_hash": "e67382f465f77c866c660e12f74327281e5b76d46cacca22a89f3f2bb11a075e",
+      "final_approximator_hash": "926212457ccd06040ea54bd4137a91f61738295d0ee8904e90e53eb90e8f0e4c",
+      "frozen_selector_hash": "43f87ceab7e3ce6ea35dccfd68c3f2a59c29adf7b7e06a09740e74927ffb335e",
+      "final_exact_k": {
+        "teacher_agreement": 0.7335,
+        "teacher_negative_agreement": 0.742841100505334,
+        "teacher_positive_agreement": 0.6575342465753424,
+        "balanced_teacher_agreement": 0.7001876735403383,
+        "teacher_vs_approximator_confusion": [
+          [
+            1323,
+            458
+          ],
+          [
+            75,
+            144
+          ]
+        ],
+        "true_label_accuracy": 0.835,
+        "teacher_cross_entropy": 0.7296312838025276,
+        "teacher_kl": 0.34538634472406454,
+        "positive_probability_mae": 0.23917154470286914
+      }
+    },
+    {
+      "seed": 1,
+      "training_mode": "hard",
+      "initial_approximator_hash": "e67382f465f77c866c660e12f74327281e5b76d46cacca22a89f3f2bb11a075e",
+      "final_approximator_hash": "a32e96c2e7d4401cdbb646b1fe14966fd208ce1c39856e172540e44089af85d9",
+      "frozen_selector_hash": "43f87ceab7e3ce6ea35dccfd68c3f2a59c29adf7b7e06a09740e74927ffb335e",
+      "final_exact_k": {
+        "teacher_agreement": 0.775,
+        "teacher_negative_agreement": 0.8001122964626615,
+        "teacher_positive_agreement": 0.5707762557077626,
+        "balanced_teacher_agreement": 0.685444276085212,
+        "teacher_vs_approximator_confusion": [
+          [
+            1425,
+            356
+          ],
+          [
+            94,
+            125
+          ]
+        ],
+        "true_label_accuracy": 0.8255,
+        "teacher_cross_entropy": 0.6408314188966056,
+        "teacher_kl": 0.2565864798181426,
+        "positive_probability_mae": 0.20556468904350186
+      }
+    },
+    {
+      "seed": 2,
+      "training_mode": "soft",
+      "initial_approximator_hash": "c29185b237d171b485f9a1f4205d375dda595239c7ef0d9faade4fe23f2b9311",
+      "final_approximator_hash": "5349f7d7f82d3999ec3167af071408806eea49654aa3892da4b95372981350a6",
+      "frozen_selector_hash": "e3fb15a62a8c34876faff59be1c03cba978f09e849c9596e637e9191faad5eff",
+      "final_exact_k": {
+        "teacher_agreement": 0.689,
+        "teacher_negative_agreement": 0.6771476698483998,
+        "teacher_positive_agreement": 0.7853881278538812,
+        "balanced_teacher_agreement": 0.7312678988511405,
+        "teacher_vs_approximator_confusion": [
+          [
+            1206,
+            575
+          ],
+          [
+            47,
+            172
+          ]
+        ],
+        "true_label_accuracy": 0.8645,
+        "teacher_cross_entropy": 0.7671882143575445,
+        "teacher_kl": 0.3829432752790814,
+        "positive_probability_mae": 0.26450057203439065
+      }
+    },
+    {
+      "seed": 2,
+      "training_mode": "hard",
+      "initial_approximator_hash": "c29185b237d171b485f9a1f4205d375dda595239c7ef0d9faade4fe23f2b9311",
+      "final_approximator_hash": "051f881549f0ba3beed144f841bffa1c373a75bf4ad43dd6a4707cdd98fe50e2",
+      "frozen_selector_hash": "e3fb15a62a8c34876faff59be1c03cba978f09e849c9596e637e9191faad5eff",
+      "final_exact_k": {
+        "teacher_agreement": 0.717,
+        "teacher_negative_agreement": 0.7231892195395845,
+        "teacher_positive_agreement": 0.6666666666666666,
+        "balanced_teacher_agreement": 0.6949279431031256,
+        "teacher_vs_approximator_confusion": [
+          [
+            1288,
+            493
+          ],
+          [
+            73,
+            146
+          ]
+        ],
+        "true_label_accuracy": 0.8795,
+        "teacher_cross_entropy": 0.6532975818457655,
+        "teacher_kl": 0.26905264276730234,
+        "positive_probability_mae": 0.22375966669496847
+      }
+    }
+  ],
+  "uncertainty": "Sample SD across three explainer seeds with one fixed teacher; no significance claim or confidence interval.",
+  "interpretation": "Hard-mask continuation reduces teacher KL and improves raw class agreement relative to the matched soft-mask continuation, while balanced agreement decreases. The remaining family-held-out gap is substantial. Selectors and motif-localization scores are unchanged."
+}

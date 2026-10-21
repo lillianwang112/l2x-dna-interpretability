@@ -1,0 +1,17 @@
+{
+  "input_sha256": "826fd016b0e0039a7eaac822b490f00519d63b3df50423240ee1d73c27b2f037",
+  "protocol_fingerprint": "437fa89735149f4a06630597bc569743c111c40f2a1fd598df1f49336cbeab5e",
+  "script_sha256": "5cf6574298b9b03b20bb1400fd01354b9facb1e457212485fad9f99837a4fe69",
+  "formats": [
+    "PNG at 220 dpi",
+    "PDF with embedded fonts"
+  ],
+  "figures": {
+    "mask_comparison.pdf": "ddf95719f763b99a92e235204528e2aa94ac3ea790bf82e390e4fca4ebd3b451",
+    "mask_comparison.png": "6d5b513992e9fe31062fdfa65c7a9e8da8cb3c38542a0a0fb484973b00224087",
+    "selection_examples.pdf": "324cb3f076262e1b322dc6936497c4e6e4888cc422b59d8098afbe6509d60964",
+    "selection_examples.png": "4a7f29b7eeffeaf8dfc5a2f025071d112f171f0d3996b86b95921a455365931a",
+    "test_overview.pdf": "2f5f68f7a28ed14289c5d39a7189b0ba84ea68a196b8ee828b85ed58d612f3c6",
+    "test_overview.png": "547d901f54785b186d6a45e86dd3017362921c88d23118cfb9a7962fc5ce67ff"
+  }
+}
